@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --section-bg-color-white: #FFFFFF;
+    --section-bg-color-black: #141414;
+    --section-bg-color-red: #840707;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Inicio del header */
+
+header {
+
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 9.8vh;
+    background-color: rgb(245, 245, 245);
+    z-index: 10;
+
+}
+.header--logo {
+    
+    position: absolute;
+    right: calc(50% - 73px);
+    top: 13px;
+    width: 140px;
+    z-index: 10;
+
+}
+
+
+/* Inicio burgerButton */
+
+.header--burgerButton {
+
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+
+}
+.header-burgerButton--item {
+
+    display: none;
+    
+
+}
+.burgerButton--lbl {
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid var(--section-bg-color-black);
+    border-radius: 6px;
+    z-index: 100;
+    
+    /* efecto de sombra */
+
+    box-shadow: 3px 3px 3px 0px rgba(20,20,20,0.6);
+    
+}
+.burgerButton--line {
+
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    margin: 2px 0px;
+    background-color: var(--section-bg-color-black);
+    
+
+}
+
+/* Efecto en Y en burgerButton */
+
+.burgerButton--lbl .line--top {
+
+    transform:translateY(5px);
+    animation: movimientoY 250ms linear;
+
+}
+.burgerButton--lbl .line--bottom {
+
+    transform:translateY(-5px);
+    animation: movimiento-Y 250ms linear;
+
+}
+
+/* Efecto de X en burgerButton */
+
+.header-burgerButton--item:checked ~ .burgerButton--lbl {
+
+    border: 1px solid var(--section-bg-color-white);
+
+}
+
+.header-burgerButton--item:checked ~ .burgerButton--lbl .burgerButton--line {
+    
+    margin: 0;
+
+}
+.header-burgerButton--item:checked ~ .burgerButton--lbl .line--top {
+
+    transform: rotate(140deg);
+    background-color: var(--section-bg-color-white);
+    position: absolute;
+    animation: movimientoX 1s linear ;
+
+}
+.header-burgerButton--item:checked ~ .burgerButton--lbl .line--middle {
+    display: none;
+}
+.header-burgerButton--item:checked ~  .burgerButton--lbl .line--bottom {
+
+    transform: rotate(-140deg);
+    background-color: var(--section-bg-color-white);
+    animation: movimiento-X 1s linear ;
+
+}
+
+@keyframes movimientoX {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(140deg);
+    }
+}
+@keyframes movimiento-X {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-140deg);
+    }
+}
+@keyframes movimientoY {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+@keyframes movimiento-Y {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Fin animaciones del burgerButton */
+
+/* Inicio del nav en dispositivos moviles y tablets */
+.burgerButton--nav {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -100vh;
+    transition: all .9s;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(120deg, var(--section-bg-color-black) 30%, var(--section-bg-color-red) 100%);
+    z-index: 100;
+}
+
+.burgerButton--nav ul {
+
+    list-style: none;
+
+}
+
+.burgerButton-nav--row {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid #570505;
+
+    /* Efecto de sombra */
+
+    box-shadow: 1px 1px 10px var(--section-bg-color-red);
+
+}
+.burgerButton-nav--enlace {
+
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+
+}
+
+.burgerButton-nav-row--item {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    margin: auto;
+
+}
+.burgerButton-nav-row--item p {
+
+    font-weight: 600;
+    line-height: 2rem;
+    font-size: 1.8rem;
+    color: var(--section-bg-color-white);
+}
+
+.burgerButton-nav-logo--container {
+    
+    width: 70%;
+    max-width: 250px;
+    margin: auto 0px;
+
+}
+
+/* Inicio animacion */
+
+.header-burgerButton--item:checked ~ .burgerButton--nav {
+    top: 0;
+    transition: all .9s;
+}
+
+/* Fin de la animación */
+/* Fin del nav */
+
+/* Inicio de del main */
+
+.section--inicio {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 90.2vh;
+    overflow: hidden;
+    z-index: 9;
+
+}
+.section-inicio--bg {
+
+    position: absolute;
+    background-image: linear-gradient(120deg, var(--section-bg-color-black) 60%, var(--section-bg-color-red) 100%);
+    width: 2500px;
+    height: 2500px;
+    z-index: 0;
+    animation: rotacionBg 4s ease infinite alternate-reverse;
+    top: -30vh;
+
+}
+@keyframes rotacionBg {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+.section-inicio--foto_container {
+
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-image: url("https://live.staticflickr.com/65535/51716457036_46bccc640b.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #FFF;
+    border-radius: 100%;
+    margin-top: 30px;
+    z-index: 9;
+
+}
+.section-inicio--descript_container {
+
+    margin-top: 20px;
+    z-index: 9;
+
+}
+.section-inicio-descript--title {
+    
+    font-size: 2.5rem;
+    color: var(--section-bg-color-white);
+    z-index: 9;
+    
+
+}
+.section-inicio-descript--subtitle {
+
+    color: var(--section-bg-color-white);
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-align: center;
+    z-index: 9;
+
+}
+.section-inicio-descript--line {
+
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background-color: var(--section-bg-color-white);
+    animation: lineaInicio 4s infinite alternate-reverse;
+}
+@keyframes lineaInicio {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+/* Fin del main */
+
+
+
+
