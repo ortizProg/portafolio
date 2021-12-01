@@ -5,21 +5,29 @@
 }
 
 :root {
-    --section-bg-color-white: #FFFFFF;
+    --section-bg-color-white: rgb(245, 245, 245);
     --section-bg-color-black: #141414;
     --section-bg-color-red: #840707;
 }
 
 html {
+
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
+
+}
+body {
+
+    
+    position: relative;
 }
 
 /* Inicio del header */
 
 header {
 
-    position: relative;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -181,6 +189,7 @@ header {
     height: 100vh;
     background-image: linear-gradient(120deg, var(--section-bg-color-black) 30%, var(--section-bg-color-red) 100%);
     z-index: 100;
+    overflow: hidden;
 }
 
 .burgerButton--nav ul {
@@ -252,6 +261,7 @@ header {
 .section--inicio {
 
     position: relative;
+    margin-top: 9.8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -333,6 +343,90 @@ header {
         width: 100%;
     }
 }
+
+/* Inicio de la segunda seccion */
+
+.section--quienSoy {
+
+    
+    width: 100vw;
+    min-height: 90.2vh;
+
+    background-color: var(--section-bg-color-white);
+
+}
+.section--quienSoy_container {
+    
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+.section-quienSoy--bg_img {
+
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-image: url("https://cdn.pixabay.com/photo/2021/11/04/06/24/ai-6767497_960_720.jpg");
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover 125%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: movimientoImagen1 15s infinite linear alternate;
+
+    /* Efecto Sombra */
+
+    box-shadow: 0px 3px 10px rgba(20, 20, 20, 0.6);
+
+}
+@keyframes movimientoImagen1 {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}
+.section-quienSoy--bg_img .efecto-sombra {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--section-bg-color-black);
+    opacity: 0.8;
+    z-index: 2;
+    top: 0;
+    
+
+}
+.section-quienSoy--title_container {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    margin-top: 10px;
+    z-index: 9;
+    
+}
+.section-quienSoy--title {
+
+    
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: #FFF;
+    z-index: 9;
+    
+
+}
+
+
 /* Fin del main */
 
 
