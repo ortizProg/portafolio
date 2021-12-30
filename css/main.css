@@ -14,12 +14,12 @@ html {
 
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
-
+    width: 100vw;
 }
 body {
 
     
-    position: relative;
+
 }
 
 /* Inicio del header */
@@ -585,6 +585,7 @@ header {
 
     color: var(--section-bg-color-white);
     font-size: 3.7rem;
+    font-weight: 900;
     text-align: center;
     padding: 20px 0px;
 
@@ -736,6 +737,7 @@ header {
 .section-estudios--title {
 
     font-size: 3.7rem;
+    font-weight: 900;
     padding: 20px 0px;
     color: var(--section-bg-color-white);
 
@@ -803,6 +805,61 @@ header {
     margin-left: 5px;
 
 }
+
+/* Inicio de la seccion del portafolio */
+
+.section--portafolio {
+
+    position: relative;
+    width: 100vw;
+    min-height: 90.2vh;
+    height: fit-content;
+    background-color: var(--section-bg-color-white);
+
+}
+.section-portafolio--title {
+
+    position: absolute;
+    font-size: 3.7rem;
+    font-weight: 900;
+    padding: 20px 0px;
+    top: calc(50% - 60px);
+
+}
+.section-portafolio--bg2 {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--section-bg-color-black);
+    clip-path: polygon(100% 0, 100% 48%, 100% 100%, 0% 100%, 100% 48%, 0% 0%);
+    
+}
+.section-portafolio--bg1 {
+
+    position: relative;
+    width: 100%;
+    height: 90.2vh;
+    background-color: var(--section-bg-color-white);
+    
+}
+.portafolio--container {
+    
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+    background-color: red;
+
+}
+.portafolio-item--imagen {
+
+    width: 100px;
+    height: 100px;
+
+}
+
+/* Fin del la seccion del portafolio */
 
 
 /* fin de target */
