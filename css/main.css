@@ -699,7 +699,8 @@ header {
 }
 .target--logo_gitHub {
 
-    background-image: url('../assets/gitHub.svg');
+    background-image: url('../assets/gitHub2.svg');
+    width: 145px;
     
 }
 .target--logo_nodeJs {
@@ -725,8 +726,8 @@ header {
     
     position: absolute;
     background-image: linear-gradient(120deg, var(--section-bg-color-black) 60%, var(--section-bg-color-red) 100%);
-    width: 2500px;
-    height: 2500px;
+    width: 4500px;
+    height: 4500px;
     z-index: -10;
     animation: rotacionBg 4s ease infinite alternate-reverse;
     top: -30vh;
