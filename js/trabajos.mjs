@@ -25,9 +25,7 @@ class Trabajo {
                     ${this.name}
                 </h4>
             </div>
-            <div class="portafolio-item--imagen_container">
-                <img src="${this.imagenUrl}" class="portafolio-item--imagen" /> 
-            </div>
+            <div class="portafolio-item--imagen_container" style="background-image: url('${this.imagenUrl}');"></div>
             <div class="portafolio-item--button_container">
                 <button class="portafolio-item--button" id="button_${this.id}">
                     Ver Proyecto
@@ -72,7 +70,7 @@ trabajosPortafolio.push(
 
     new Trabajo({
         name: "prueba",
-        imagenUrl: "https://www.tailorbrands.com/wp-content/uploads/2020/07/twitter-logo.jpg",
+        imagenUrl: "https://lh3.googleusercontent.com/fife/AAWUweV4anUwkXbUerLnX_R_7yixJqtFvazFBwgoeetwcgSt7iIDWGEV3ipp6UBQ_FWvIZnvHcpd32pXEFuwyr5A9rUnO1QWeZF0ZS9vMB2b52cIn_-PcZBx-LWB-VbLqzsOe3PWL05UpyQ_rWDg-WXZbUhC32UXeQZeXOY8hivtuLZT4mM2mK5wDo1Gw6NPxCFIZ4KhkbyXJbDVHuyJXyt98KZXwdBha9s8znC1zxVe4dT99w9FSDsn2j4z2cnotnLZHojcHehLmSSiYb417sAKT1pkAoHaZirZnzs_apxjnKsomqJBk0PHKXo0zcUEkSf_qrm2Q5s6jOK2bK2socaBbliMYvHtj8LdHFxLnpGifL6_pYRWprrStdr1rvqKhvxsLZCanLZmtV95kygn-jFr5X7moGDzjvpNNWif85BEH3XLnxPLrIDN0f8WtbQuprJGSu5UiWiAYJ_wXFDmPg3N8MIz84AEfncD-bGdrd_C0ndVWYt9MXS8zkxFGP9QZO9o6Yv4L8zGiHgwWq920sKyT9Y-s6l1Eop6HRV3fUM3KSL7EdMMCfkkS7V1eGrhHF_ZZZzkDQHPHA8rlS5MetP_7urFIahCXSD0o2W4tcSG_QlXiIMqI-c622Dtbams4PijhtmBRQ0v04DZstBU5wkii4K-Z-1LRga3Kvyq6dAU8qmCEMRZ-E7gcPS_QpIb_I8OPDbl8ahUt3wHvLTP6ltamq9dAbNzDWpIDQ=w811-h680-ft",
 
     })
 

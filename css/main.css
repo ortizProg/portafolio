@@ -15,12 +15,13 @@ html {
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
     width: 100vw;
-}
-body {
 
-    
+    /* scroll efect */
+
+    scroll-behavior: smooth;
 
 }
+
 
 /* Inicio del header */
 
@@ -33,17 +34,35 @@ header {
     align-items: center;
     width: 100vw;
     height: 9.8vh;
-    background-color: rgb(245, 245, 245);
+    background-color: rgba(245, 245, 245);
     z-index: 100;
+    opacity: 1;
 
 }
-.header--logo {
+.nav--desktop {
+
+    display: none;
+
+}
+.header--logo_phone {
     
     position: absolute;
     right: calc(50% - 73px);
     top: 13px;
     width: 140px;
     z-index: 10;
+
+}
+#Capa_1 {
+
+    transform: scale(1.3);
+    position: absolute;
+    top: 16px;
+
+}
+.header--logo_desktop {
+
+    display: none;
 
 }
 
@@ -261,12 +280,11 @@ header {
 .section--inicio {
 
     position: relative;
-    margin-top: 9.8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 90.2vh;
+    height: 100vh;
     overflow: hidden;
     z-index: 9;
 
@@ -343,6 +361,17 @@ header {
         width: 100%;
     }
 }
+.section-inicio-descript--slogan {
+
+    color: var(--section-bg-color-white);
+    font-size: 1.8rem;
+    padding-top: 10px;
+    font-weight: lighter;
+    line-height: 2rem;
+    text-align: center;
+    z-index: 9;
+
+}
 
 /* Inicio de la segunda seccion */
 
@@ -350,7 +379,7 @@ header {
 
     
     width: 100vw;
-    min-height: 90.2vh;
+    min-height: 100vh;
     max-height: 180.4vh;
     background-color: var(--section-bg-color-white);
     overflow: hidden;
@@ -370,7 +399,7 @@ header {
 
     position: relative;
     width: 100%;
-    height: 90.2vh;
+    height: 100vh;
     background-image: url("https://cdn.pixabay.com/photo/2021/11/04/06/24/ai-6767497_960_720.jpg");
     background-position: top;
     background-attachment: fixed;
@@ -576,6 +605,7 @@ header {
     max-height: fit-content;
     background-color: var(--section-bg-color-red);
     z-index: 9;
+    padding-bottom: 30px;
 
 }
 
@@ -592,7 +622,11 @@ header {
 }
 
 /* fin del titulo */
+.section-skills--image img {
 
+    display: none;
+
+}
 /* inicio del target */
 .section-skills--target_container {
 
@@ -721,6 +755,7 @@ header {
     height: fit-content;
     overflow: hidden;
     z-index: 9;
+    
 
 }
 .estudios--bg_color {
@@ -764,6 +799,11 @@ header {
     height: fit-content;
     border: 1px solid var(--section-bg-color-white);
     border-radius: 10px;
+
+}
+.estudios--imagen img {
+
+    display: none;
 
 }
 .estudios--title_container h4 {
@@ -845,20 +885,117 @@ header {
 }
 .portafolio--container {
     
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     height: fit-content;
     overflow: hidden;
     position: relative;
-    background-color: red;
+    background-color: var(--section-bg-color-black);
+    top: -1px;
 
 }
-.portafolio-item--imagen {
+.portafolio--item {
 
-    width: 100px;
-    height: 100px;
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    height: fit-content;
+    min-height: 300px;
+    margin-top: 80px;
+    background-color: var(--section-bg-color-white);
+    border-radius: 10px;
+
+    /* efecto de sombra */
+
+    box-shadow: 5px 10px 10px rgba(245, 245, 245, 0.3);
 
 }
+.portafolio--item:last-child {
 
+    margin-bottom: 80px;
+
+}
+.portafolio-item--title_container {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -25px;
+    background-color: var(--section-bg-color-red);
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 10px;
+    border-radius: 10px;
+
+}
+.portafolio-item--title {
+
+    font-size: 2.7rem;
+    font-weight: lighter;
+    color: var(--section-bg-color-white);
+
+
+}
+.portafolio-item--imagen_container {
+
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    animation: movimientoImagenPortafolio 15s infinite linear alternate;
+    background-repeat: no-repeat;
+
+} 
+@keyframes movimientoImagenPortafolio {
+    
+    0% {
+        background-position: top left;
+    } 30% {
+        background-position: bottom right;
+    }
+    60% {
+        background-position: top right;
+    }
+    80% {
+        background-position: bottom left;
+    }
+    100% {
+        background-position: top left;
+    }
+
+}
+.portafolio-item--button_container {
+
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    
+}
+.portafolio-item--button {
+
+    padding: 5px 40px;
+    border: none;
+    background-color: var(--section-bg-color-red);
+
+    /* bordes */
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    /* fuente */
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--section-bg-color-white);
+    
+
+}
 /* Fin del la seccion del portafolio */
 
 
@@ -868,7 +1005,77 @@ header {
 
 /* Fin del main */
 
+/* Inicio del footer */
 
+footer {
+
+    position: relative;
+    width: 100vw;
+    height: 100px;
+    overflow: hidden;
+    border-top: 1px solid var(--section-bg-color-white);
+
+    
+
+}
+.footer--bg {
+
+    position: absolute;
+    background-image: linear-gradient(120deg, var(--section-bg-color-black) 60%, var(--section-bg-color-red) 100%);
+    width: 4500px;
+    height: 4500px;
+    z-index: -10;
+    animation: rotacionBg 4s ease infinite alternate-reverse;
+    top: -300vh;
+    left: -100vw;
+
+
+}
+.redes--item img {
+
+    position: relative;
+    width: 25px;
+    
+}
+.redes--item {
+
+    position: relative;
+    margin: 10px 7px;
+    
+}
+
+.footer--contact {
+
+    position: relative;
+    width: 100%;
+
+
+}
+.footer-contact--redes_container {
+
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    
+}
+.redes--title {
+
+    font-size: 1.6rem;
+    font-weight: lighter;
+    color: var(--section-bg-color-white);
+    text-align: center;
+
+}
+.desarrollo--title {
+
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: var(--section-bg-color-white);
+    text-align: center;
+
+}
+
+/* Fin del footer */
 
 /* Media queris */
 
