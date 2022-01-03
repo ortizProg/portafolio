@@ -208,7 +208,6 @@ header {
 .section-portafolio--title {
 
     font-size: 12rem;
-    color: var(--section-bg-color-red);
     top: calc(50% - 120px);
 
 }
