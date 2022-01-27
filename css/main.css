@@ -280,7 +280,7 @@ header {
 main {
 
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
 
 }
 
@@ -1024,7 +1024,7 @@ footer {
     height: 100px;
     overflow: hidden;
     bottom: 0;
-    z-index: 1000;
+    z-index: 1;
     border-top: 1px solid var(--section-bg-color-white);
 
     
@@ -1111,6 +1111,11 @@ footer {
     cursor: pointer;
 
 }
+.ventanaFlotante__cierre:hover {
+
+    transform: translateY(-3px);
+
+}
 .ventanaFlotante__right {
 
     width: 100%;
@@ -1177,6 +1182,11 @@ footer {
     border: 2px solid var(--section-bg-color-black);
     border-radius: 5px;
     cursor: pointer;
+
+}
+.button--visita:hover {
+
+    transform: translateY(-3px);
 
 }
 
