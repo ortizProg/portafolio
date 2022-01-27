@@ -216,3 +216,11 @@ header {
     margin: 30px;
 
 }
+.ventanaFlotante__bg {
+
+    
+    background-size: 205%;
+    animation: movimientoImagenPortafolio 10s infinite linear alternate;
+    
+
+}

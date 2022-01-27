@@ -1,0 +1,44 @@
+.portafolio--item {
+
+    margin: 40px 10px;
+
+}
+.ventanaFlotante__cierre {
+
+    right: 25px;
+    font-size: 3.5rem;
+
+}
+.ventanaFlotante__right {
+
+    width: 55%;
+    height: 100%;
+    order: 2;
+
+}
+.ventanaFlotante__bg {
+
+    
+    background-size: 345%;
+    animation: movimientoImagenPortafolio 7s infinite linear alternate;
+    
+
+}
+.ventanaFlotante__left {
+
+    width: 45%;
+    height: 100%;
+
+    /* Efecto de sombra */
+
+    box-shadow: 10px 0px 30px;
+
+}
+@media (min-width: 740px) {
+    .ventanaFlotante__bg {
+
+    
+        background-size: 250%;
+    
+    }
+} 
